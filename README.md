@@ -42,10 +42,30 @@ sudo nano /etc/systemd/journald.conf
 ```
 [Journal]
 Storage=volatile
-RateLimitIntervalSec=10s
-RateLimitBurst=200
-RuntimeMaxUse=20M
+RateLimitIntervalSec=30s
+RateLimitBurst=1000
+MaxLevelStore=err
 ```
+>[!TIP]
+> Parâmetros do ``` MaxLevelStore ```:
+>
+>    0 ou “emerg”
+>
+>    1 ou “alert”
+>
+>    2 ou “crit”
+>
+>    3 ou “err”
+>
+>    4 ou “warning”
+>
+>    5 ou “notice”
+>
+>    6 ou “info”
+>
+>    7 ou “debug”
+>
+> Mensagens iguais ou abaixo do nível de log especificado são armazenadas/encaminhadas, mensagens acima são descartadas.
 
 #### Configurar Commit do sistema de arquivos e enviar /tmp e /var/log para memória
 
