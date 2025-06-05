@@ -69,7 +69,7 @@ Adicionar o parâmetro ```commit="seconds"``` na linha EXT4:
 Adicionar no final do arquivo:
 
 ```
-tmpfs /tmp tmpfs defaults,noatime 0 0
+tmpfs /tmp tmpfs defaults,noatime,size=5M 0 0
 tmpfs /var/log tmpfs defaults,noatime,size=16M 0 0
 ```
 
