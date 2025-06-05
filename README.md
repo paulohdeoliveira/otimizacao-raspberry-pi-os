@@ -66,12 +66,24 @@ Adicionar o parâmetro ```commit="seconds"``` na linha EXT4:
 >[!IMPORTANT]
 > Em caso de desligamento do sistema os arquivos temporários e logs serão perdidos, pois estão em modo RAM-ONLY.
 
+>[!TIP]
+> Para definir o tamanho ideal (parâmetro ```size```) do arquivo /tmp e /var/log consulte o tamando em disco antes de alterar o ```/etc/fstab```
+>
+>```du -h /tmp```
+>
+>```du -h /var/log```
+
 Adicionar no final do arquivo:
 
 ```
 tmpfs /tmp tmpfs defaults,noatime,size=5M 0 0
 tmpfs /var/log tmpfs defaults,noatime,size=16M 0 0
 ```
+Reniciar o sistema.
+
+>[!TIP]
+> Para consultar se as alterações tiveram efeito: ```df -h```
+
 
 
 
