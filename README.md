@@ -1,4 +1,4 @@
-#### Otimizacão RaspberryOS 
+#### Otimizacão Raspberry Pi OS 
 
 >[!NOTE]
 >Hardware - Raspberry Zero 2 W
