@@ -74,7 +74,7 @@ sudo /etc/fstab
 ```
 ##### Configurar o commit
 
->[!IMPORTANT]
+>[!CAUTION]
 > Em caso de desligamento do sistema os dados de cache que ainda não foram gravados no disco serão perdidos.
 
 Adicionar o parâmetro ```commit="seconds"``` na linha EXT4:
@@ -83,7 +83,7 @@ Adicionar o parâmetro ```commit="seconds"``` na linha EXT4:
 
 ##### Configurar /tmp e /var/log para memória
 
->[!IMPORTANT]
+>[!CAUTION]
 > Em caso de desligamento do sistema os arquivos temporários e logs serão perdidos, pois estão em modo RAM-ONLY.
 
 >[!TIP]
